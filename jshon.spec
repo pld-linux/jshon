@@ -6,7 +6,7 @@ License:	MIT
 Group:		Applications/System
 URL:		http://kmkeen.com/jshon/
 # Source0:	http://kmkeen.com/%{name}/jshon.tar.gz
-Source0:	ftp://ftp.debian.org/debian/pool/main/j/jshon/jshon_20131010.orig.tar.gz
+Source0:	ftp://ftp.debian.org/debian/pool/main/j/jshon/%{name}_%{version}.orig.tar.gz
 # Source0-md5:	f939755699cd152379f97a8a9e2fe7c4
 BuildRequires:	jansson
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
