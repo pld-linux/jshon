@@ -1,12 +1,13 @@
 Summary:	Jshon is a JSON parser designed for maximum convenience within the shell
 Name:		jshon
-Version:	20131105
+Version:	20131010
 Release:	1
 License:	MIT
 Group:		Applications/System
 URL:		http://kmkeen.com/jshon/
-Source0:	http://kmkeen.com/%{name}/jshon.tar.gz
-# Source0-md5:	4b1cae2237db068ee4738789286a0409
+# Source0:	http://kmkeen.com/%{name}/jshon.tar.gz
+Source0:	ftp://ftp.debian.org/debian/pool/main/j/jshon/jshon_20131010.orig.tar.gz
+# Source0-md5:	f939755699cd152379f97a8a9e2fe7c4
 BuildRequires:	jansson
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -18,7 +19,10 @@ shell
 %setup -q
 
 %build
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} %{rpmcppflags}" \
+	LDFLAGS="%{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
