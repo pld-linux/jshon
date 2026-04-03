@@ -1,7 +1,7 @@
 Summary:	Jshon is a JSON parser designed for maximum convenience within the shell
 Name:		jshon
 Version:	20131010
-Release:	2
+Release:	3
 License:	MIT
 Group:		Applications/System
 # Source0:	http://kmkeen.com/%{name}/jshon.tar.gz
